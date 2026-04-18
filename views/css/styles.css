@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+
+body{
+      background: linear-gradient(to top, #30cfd0, #330867);
+}
+
+
+       /* Lógica do Checkbox para abrir o menu no mobile */
+        #menu-toggle:checked ~ #menu-items {
+            display: flex;
+        }
+
+        /* Estilo para o ícone do menu (hamburguer) */
+        .menu-icon span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+
+       
+        #menu-items {
+            display: none;
+            position: absolute;
+            top: 5rem; /* top-20 */
+            left: 0;
+            width: 100%;
+            background-color: black;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            outline: none;
+            z-index: 40;
+            padding-bottom: 1.5rem; /* pb-6 */
+        }
+
+        @media (min-width: 1024px) {
+            #menu-items {
+                display: flex;
+                position: relative;
+                top: 0;
+                width: auto;
+                background-color: transparent;
+                flex-direction: row;
+                padding-bottom: 0;
+            }
+        }
+
+          #menu-toggle:checked ~ #menu-items {
+            display: flex;
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
